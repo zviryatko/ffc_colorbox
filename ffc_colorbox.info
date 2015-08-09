@@ -1,0 +1,8 @@
+name = Field formatter conditions Colorbox Rules
+description = Colorbox options in rules action for field formatter conditions.
+core = 7.x
+
+dependencies[] = ffc
+dependencies[] = rules
+
+files[] = includes/RulesDataUIFFCColorbox.inc

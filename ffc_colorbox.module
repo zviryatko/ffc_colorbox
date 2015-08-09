@@ -1,0 +1,16 @@
+<?php
+/**
+ * @file
+ * Module ffc_colorbox module file.
+ */
+
+/**
+ * Implements hook_preprocess_field().
+ */
+function ffc_colorbox_preprocess_field(&$variables) {
+  $element = $variables['element'];
+  if ($variables['element']['#formatter'] == 'colorbox') {
+    $style = $variables['items'][0]['#display_settings']['colorbox_node_style'];
+    $variables['classes_array'][] = drupal_html_class('colorbox-style-' . $style);
+  }
+}
